@@ -1,0 +1,16 @@
+#define ledPin 2
+const int soundSensorPin = A0;
+
+
+void setup() {
+  pinMode(soundSensorPin, INPUT);
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int soundSensorValue = analogRead(soundSensorPin);
+  Serial.println(soundSensorValue);
+}
+
+
